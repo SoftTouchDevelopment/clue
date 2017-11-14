@@ -12,6 +12,7 @@
 		B19F57031FB6A557006C0AE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19F57011FB6A557006C0AE9 /* Main.storyboard */; };
 		B19F57051FB6A557006C0AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19F57041FB6A557006C0AE9 /* Assets.xcassets */; };
 		B19F57081FB6A557006C0AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19F57061FB6A557006C0AE9 /* LaunchScreen.storyboard */; };
+		DF4AA17C1FBA268300B8E402 /* players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4AA17B1FBA268300B8E402 /* players.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B19F57041FB6A557006C0AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B19F57071FB6A557006C0AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B19F57091FB6A557006C0AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF4AA17B1FBA268300B8E402 /* players.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = players.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +59,9 @@
 				B19F56FD1FB6A557006C0AE9 /* AppDelegate.swift */,
 				B19F56FF1FB6A557006C0AE9 /* ViewController.swift */,
 				B19F57011FB6A557006C0AE9 /* Main.storyboard */,
-				B19F57041FB6A557006C0AE9 /* Assets.xcassets */,
+				DF4AA17B1FBA268300B8E402 /* players.storyboard */,
 				B19F57061FB6A557006C0AE9 /* LaunchScreen.storyboard */,
+				B19F57041FB6A557006C0AE9 /* Assets.xcassets */,
 				B19F57091FB6A557006C0AE9 /* Info.plist */,
 			);
 			path = Clue;
@@ -124,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B19F57081FB6A557006C0AE9 /* LaunchScreen.storyboard in Resources */,
+				DF4AA17C1FBA268300B8E402 /* players.storyboard in Resources */,
 				B19F57051FB6A557006C0AE9 /* Assets.xcassets in Resources */,
 				B19F57031FB6A557006C0AE9 /* Main.storyboard in Resources */,
 			);
