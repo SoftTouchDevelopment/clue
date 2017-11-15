@@ -10,6 +10,11 @@ import UIKit
 
 class playersTableViewCell: UITableViewCell {
 
+     //MARK: Properties
+    
+    @IBOutlet weak var playerNameTextField: UITextField!
+    @IBOutlet weak var characterPicker: UIPickerView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

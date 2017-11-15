@@ -56,6 +56,10 @@
                                                 </pickerView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="characterPicker" destination="KmC-sh-QLx" id="RLu-sc-jwC"/>
+                                            <outlet property="playerNameTextField" destination="g5x-eY-YEy" id="pVy-gF-VQf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
