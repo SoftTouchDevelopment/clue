@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         versionLabel.text = getVersionstr()
+        generateSuspects()
     }
     
     //MARK: Actions
@@ -31,6 +32,12 @@ class ViewController: UIViewController {
         let version = (Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String)!
         let build = (Bundle.main.infoDictionary!["CFBundleVersion"] as? String)!
         return "version \(version).\(build)"
+    }
+    
+    func generateSuspects() {
+        var suspects = [suspect]()
+        suspects += [suspect(type: suspect_type.col_mustard), suspect(type: suspect_type.prof_plum), suspect(type: suspect_type.mr_green), suspect(type: suspect_type.mrs_peacock), suspect(type: suspect_type.miss_scarlet), suspect(type: suspect_type.mrs_white)]
+        
     }
 
 }
