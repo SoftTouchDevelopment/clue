@@ -17,7 +17,7 @@ enum suspect_type {
     mrs_white
 }
 
-let suspectDict: Dictionary = [
+let suspectDict: [suspect_type: String]  = [
     suspect_type.col_mustard: "Col. Mustard",
     suspect_type.prof_plum: "Prof. Plum",
     suspect_type.mr_green: "Mr Green",
@@ -33,13 +33,15 @@ class suspect {
     
     init(type: suspect_type, player: String) {
         self.type = type
-        self.name = suspectDict[type]!
+        self.name = suspectDict[type] ?? "unknown type"
         self.player = player
     }
     
     init(type: suspect_type) {
         self.type = type
-        self.name = suspectDict[type]!
+        let name = suspectDict[type]  ?? "unknown type"
+        print(name)
+        self.name = suspectDict[type] ?? "unknown type"
     }
     
     func getName() -> String {
