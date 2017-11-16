@@ -14,7 +14,6 @@
 		B19F57081FB6A557006C0AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19F57061FB6A557006C0AE9 /* LaunchScreen.storyboard */; };
 		DF4AA17C1FBA268300B8E402 /* players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4AA17B1FBA268300B8E402 /* players.storyboard */; };
 		DF4AA1821FBBD16900B8E402 /* suspects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4AA1811FBBD16900B8E402 /* suspects.swift */; };
-		DF4AA1881FBBDB4500B8E402 /* playersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4AA1871FBBDB4500B8E402 /* playersTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		B19F57091FB6A557006C0AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DF4AA17B1FBA268300B8E402 /* players.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = players.storyboard; sourceTree = "<group>"; };
 		DF4AA1811FBBD16900B8E402 /* suspects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = suspects.swift; sourceTree = "<group>"; };
-		DF4AA1871FBBDB4500B8E402 /* playersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playersTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +66,6 @@
 				B19F57061FB6A557006C0AE9 /* LaunchScreen.storyboard */,
 				B19F57041FB6A557006C0AE9 /* Assets.xcassets */,
 				B19F57091FB6A557006C0AE9 /* Info.plist */,
-				DF4AA1871FBBDB4500B8E402 /* playersTableViewCell.swift */,
 			);
 			path = Clue;
 			sourceTree = "<group>";
@@ -154,7 +151,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF4AA1881FBBDB4500B8E402 /* playersTableViewCell.swift in Sources */,
 				B19F57001FB6A557006C0AE9 /* ViewController.swift in Sources */,
 				DF4AA1821FBBD16900B8E402 /* suspects.swift in Sources */,
 				B19F56FE1FB6A557006C0AE9 /* AppDelegate.swift in Sources */,
