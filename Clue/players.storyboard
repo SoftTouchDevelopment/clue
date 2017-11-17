@@ -26,7 +26,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back-button"/>
                                 <connections>
-                                    <segue destination="Lhk-6r-VlT" kind="show" id="pE2-fB-ctt"/>
+                                    <segue destination="Lhk-6r-VlT" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="pE2-fB-ctt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yE4-TB-9hi" userLabel="nextButton">
@@ -41,6 +41,9 @@
                                     <color key="titleColor" red="1" green="0.92350562660000002" blue="0.21401675580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="1" green="0.90094984353606089" blue="0.3651470094469127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="clickMustardButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="VyO-NW-QQw"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Col. Mustard" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Smm-b0-DFH" userLabel="mustardTextField">
                                 <rect key="frame" x="125" y="186" width="97" height="30"/>

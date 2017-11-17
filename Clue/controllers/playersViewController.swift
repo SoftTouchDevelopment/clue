@@ -25,6 +25,8 @@ class playersViewController: UIViewController {
     @IBOutlet weak var whiteButton: UIButton!
     @IBOutlet weak var whiteTextfield: UITextField!
     
+    var selectedButton : UIButton = nib
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,6 +40,26 @@ class playersViewController: UIViewController {
     
     // MARK: actions
     
+    @IBAction func clickMustardButton(_ sender: UIButton) {
+//        if (selectedButton != nib) {
+//            setUnselectImg(selectButton)
+//            if(selectedButton == mustardButton) {
+//                selectButton = nib
+//                
+//            } else {
+//                
+//            }
+//            selectButton = mustardButton
+//            setSelectedImg(selectButton)
+//        }
+//        else if (selectedButton == mustardButton)
+//        && selectedButton != mustardButton)
+//        {
+//            setUnselectImg(selectButton)
+//        }
+//        selectButton = mustardButton
+//        
+    }
     
 
     /*
@@ -51,5 +73,12 @@ class playersViewController: UIViewController {
     */
     
     // MARK: private functions
+    func setSelectedImg (button : UIButton) {
+        
+    }
+    
+    func setUnselectImg (button : UIButton) {
+        
+    }
 
 }
