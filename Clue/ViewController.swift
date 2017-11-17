@@ -13,10 +13,12 @@ class ViewController: UIViewController {
     //MARK: Properties
    
     @IBOutlet weak var versionLabel: UILabel!
+    @IBOutlet weak var copyrightLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         versionLabel.text = getVersionstr()
+        copyrightLabel.text = getCopyright()
         generateSuspects()
     }
     
@@ -28,10 +30,15 @@ class ViewController: UIViewController {
     }
     
 
-    func getVersionstr() -> String{
+    func getVersionstr() -> String {
         let version = (Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String)!
         let build = (Bundle.main.infoDictionary!["CFBundleVersion"] as? String)!
         return "version \(version).\(build)"
+    }
+    
+    func getCopyright() -> String {
+        let copyright = (Bundle.main.infoDictionary!["NSHumanReadableCopyright"] as? String)!
+        return copyright
     }
     
     func generateSuspects() {
