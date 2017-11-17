@@ -25,7 +25,7 @@ class playersViewController: UIViewController {
     @IBOutlet weak var whiteButton: UIButton!
     @IBOutlet weak var whiteTextfield: UITextField!
     
-    var selectedButton : UIButton = nib
+    var selectedButton : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,24 +41,18 @@ class playersViewController: UIViewController {
     // MARK: actions
     
     @IBAction func clickMustardButton(_ sender: UIButton) {
-//        if (selectedButton != nib) {
-//            setUnselectImg(selectButton)
-//            if(selectedButton == mustardButton) {
-//                selectButton = nib
-//                
-//            } else {
-//                
-//            }
-//            selectButton = mustardButton
-//            setSelectedImg(selectButton)
-//        }
-//        else if (selectedButton == mustardButton)
-//        && selectedButton != mustardButton)
-//        {
-//            setUnselectImg(selectButton)
-//        }
-//        selectButton = mustardButton
-//        
+        if (selectedButton != "") {
+            setUnselectImg(button: getButtonByName(name : selectedButton))
+            if(selectedButton == "mustardButton") {
+                selectedButton = ""
+            } else {
+                selectedButton = "mustardButton"
+                setSelectedImg(button: getButtonByName(name: selectedButton))
+            }
+        } else {
+            selectedButton = "mustardButton"
+            setSelectedImg(button : getButtonByName(name : selectedButton))
+        }
     }
     
 
@@ -74,11 +68,19 @@ class playersViewController: UIViewController {
     
     // MARK: private functions
     func setSelectedImg (button : UIButton) {
-        
+        button.setImage(UIImage(named: "mustard-selected.png"), for: UIControlState.normal)
     }
     
     func setUnselectImg (button : UIButton) {
-        
+        button.setImage(UIImage(named: "mustard.png"), for: UIControlState.normal)
+    }
+    
+    func getButtonByName (name : String) -> UIButton {
+        if(name == "mustardButton") {
+            return mustardButton
+        } else {
+            return greenButton
+        }
     }
 
 }
