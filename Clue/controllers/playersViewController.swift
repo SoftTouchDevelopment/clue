@@ -24,12 +24,22 @@ class playersViewController: UIViewController {
     @IBOutlet weak var scarletTextfield: UITextField!
     @IBOutlet weak var whiteButton: UIButton!
     @IBOutlet weak var whiteTextfield: UITextField!
+    @IBOutlet weak var nextButton: UIButton!
     
     var selectedButton : String = ""
+    var buttonDict: [ String : UIButton] = [:]
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        buttonDict   = [
+            "mustard" : mustardButton,
+            "plum" : plumButton,
+            "green" : greenButton,
+            "peacock" : peacockButton,
+            "scarlet" : scarletButton,
+            "white" : whiteButton
+        ]
         // Do any additional setup after loading the view.
     }
 
@@ -41,21 +51,29 @@ class playersViewController: UIViewController {
     // MARK: actions
     
     @IBAction func clickMustardButton(_ sender: UIButton) {
-        if (selectedButton != "") {
-            setUnselectImg(button: getButtonByName(name : selectedButton))
-            if(selectedButton == "mustardButton") {
-                selectedButton = ""
-            } else {
-                selectedButton = "mustardButton"
-                setSelectedImg(button: getButtonByName(name: selectedButton))
-            }
-        } else {
-            selectedButton = "mustardButton"
-            setSelectedImg(button : getButtonByName(name : selectedButton))
-        }
+        setButton(clickedbutton : sender, buttonName: "mustard")
     }
     
-
+    @IBAction func clickPlumButton(_ sender: UIButton) {
+        setButton(clickedbutton : sender, buttonName: "plum")
+    }
+    
+    @IBAction func clickGreenButton(_ sender: UIButton) {
+        setButton(clickedbutton : sender, buttonName: "green")
+    }
+    
+    @IBAction func clickPeacockButton(_ sender: UIButton) {
+        setButton(clickedbutton : sender, buttonName: "peacock")
+    }
+    
+    @IBAction func clickScarletButton(_ sender: UIButton) {
+        setButton(clickedbutton : sender, buttonName: "scarlet")
+    }
+    
+    @IBAction func clickWhiteButton(_ sender: UIButton) {
+        setButton(clickedbutton : sender, buttonName: "white")
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -67,20 +85,35 @@ class playersViewController: UIViewController {
     */
     
     // MARK: private functions
-    func setSelectedImg (button : UIButton) {
-        button.setImage(UIImage(named: "mustard-selected.png"), for: UIControlState.normal)
+    func setSelectedImg (button : UIButton, name : String) {
+        let imgName = "\(name)-selected.png"
+        button.setImage(UIImage(named: imgName), for: UIControlState.normal)
     }
     
-    func setUnselectImg (button : UIButton) {
-        button.setImage(UIImage(named: "mustard.png"), for: UIControlState.normal)
+    func setUnselectImg (button : UIButton, name : String) {
+        let imgName = "\(name).png"
+        button.setImage(UIImage(named: imgName), for: UIControlState.normal)
     }
     
     func getButtonByName (name : String) -> UIButton {
-        if(name == "mustardButton") {
-            return mustardButton
-        } else {
-            return greenButton
+        return buttonDict[name]!
+    }
+    
+    func setButton(clickedbutton : UIButton, buttonName : String) {
+        if (selectedButton != "") {
+            setUnselectImg(button: getButtonByName(name : selectedButton), name : selectedButton)
+            if(selectedButton == buttonName) { //clicked the selected button
+                selectedButton = ""
+            } else { // selected another button
+                selectedButton = buttonName
+                setSelectedImg(button: clickedbutton, name: buttonName)
+            }
+        } else { // selected a button
+            selectedButton = buttonName
+            setSelectedImg(button : clickedbutton, name: buttonName)
         }
+        
+        //TO-DO: next button disable/enable
     }
 
 }
