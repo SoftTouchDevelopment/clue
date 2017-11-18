@@ -19,7 +19,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         versionLabel.text = getVersionstr()
         copyrightLabel.text = getCopyright()
-        generateSuspects()
     }
     
     //MARK: Actions
@@ -39,12 +38,6 @@ class ViewController: UIViewController {
     func getCopyright() -> String {
         let copyright = (Bundle.main.infoDictionary!["NSHumanReadableCopyright"] as? String)!
         return copyright
-    }
-    
-    func generateSuspects() {
-        var suspects = [suspect]()
-        suspects += [suspect(type: suspect_type.col_mustard), suspect(type: suspect_type.prof_plum), suspect(type: suspect_type.mr_green), suspect(type: suspect_type.mrs_peacock), suspect(type: suspect_type.miss_scarlet), suspect(type: suspect_type.mrs_white)]
-        
     }
 
 }
