@@ -33,6 +33,9 @@
                                 <rect key="frame" x="627" y="137" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="forward-button"/>
+                                <connections>
+                                    <action selector="clickNextButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="Gwc-tz-ATX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sc-vo-3ua" userLabel="mustardBtn">
                                 <rect key="frame" x="98" y="31" width="152" height="152"/>
@@ -42,10 +45,10 @@
                                     <color key="titleShadowColor" red="1" green="0.90094984353606089" blue="0.3651470094469127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickMustardButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="VyO-NW-QQw"/>
+                                    <action selector="clickPlayerButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="O6O-8A-fWu"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Col. Mustard" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Smm-b0-DFH" userLabel="mustardTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Col. Mustard" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Smm-b0-DFH" userLabel="mustardTextField">
                                 <rect key="frame" x="125" y="186" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -60,10 +63,10 @@
                                     <color key="titleShadowColor" red="0.86397655272528395" green="0.56653388167284047" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickPlumButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="pjW-NE-s9A"/>
+                                    <action selector="clickPlayerButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="L6f-8B-bDF"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Prof. Plum" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYJ-96-I4y" userLabel="plumTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prof. Plum" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYJ-96-I4y" userLabel="plumTextField">
                                 <rect key="frame" x="313" y="186" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -78,10 +81,10 @@
                                     <color key="titleShadowColor" red="0.43424260850000002" green="1" blue="0.4888710315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickGreenButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="aZ9-co-pp1"/>
+                                    <action selector="clickPlayerButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="G7D-Xj-Uqb"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mr Green" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDV-1c-f5n" userLabel="greenTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mr Green" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDV-1c-f5n" userLabel="greenTextField">
                                 <rect key="frame" x="518" y="186" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -96,10 +99,10 @@
                                     <color key="titleShadowColor" red="0.20195028570000001" green="0.30590004929999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickPeacockButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="RaT-5F-Wgj"/>
+                                    <action selector="clickPlayerButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="Avu-V4-H4i"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mrs Peacock" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c82-Ik-NsP" userLabel="peacockTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mrs Peacock" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c82-Ik-NsP" userLabel="peacockTextField">
                                 <rect key="frame" x="126" y="364" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -114,10 +117,10 @@
                                     <color key="titleShadowColor" red="1" green="0.081514688730000007" blue="0.1152501767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickScarletButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="Vrb-Vc-pMs"/>
+                                    <action selector="clickPlayerButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="75R-QV-iks"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Miss Scarlet" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KeR-X6-sUr" userLabel="scarletTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Miss Scarlet" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KeR-X6-sUr" userLabel="scarletTextField">
                                 <rect key="frame" x="318" y="364" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -132,10 +135,10 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickWhiteButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="WYj-Ux-VfB"/>
+                                    <action selector="clickPlayerButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="IO2-Wm-G48"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mrs White" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hib-9k-m1F" userLabel="whiteTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Mrs White" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hib-9k-m1F" userLabel="whiteTextField">
                                 <rect key="frame" x="511" y="364" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -172,6 +175,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="Main" storyboardName="Main" id="Lhk-6r-VlT" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyr-Sy-UfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="113" y="719"/>
         </scene>
     </scenes>
     <resources>

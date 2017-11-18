@@ -27,12 +27,14 @@ class playersViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     
     var selectedButton : String = ""
-    var buttonDict: [ String : UIButton] = [:]
- 
+    var buttonDict: [ String : UIButton ] = [:]
+    var nameDict: [ UIButton : String ] = [:]
+    //var clue : game
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        buttonDict   = [
+        nextButton.isEnabled = false
+        buttonDict = [
             "mustard" : mustardButton,
             "plum" : plumButton,
             "green" : greenButton,
@@ -40,7 +42,15 @@ class playersViewController: UIViewController {
             "scarlet" : scarletButton,
             "white" : whiteButton
         ]
-        // Do any additional setup after loading the view.
+        nameDict = [
+            mustardButton: "mustard",
+            plumButton: "plum",
+            greenButton : "green",
+            peacockButton : "peacock",
+            scarletButton : "scarlet",
+            whiteButton : "white"
+        ]
+        //clue = game()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,30 +59,29 @@ class playersViewController: UIViewController {
     }
     
     // MARK: actions
-    
-    @IBAction func clickMustardButton(_ sender: UIButton) {
-        setButton(clickedbutton : sender, buttonName: "mustard")
+    @IBAction func clickPlayerButton(_ sender: UIButton) {
+        let buttonName = nameDict[sender]!
+        print("click button by name: \(buttonName)")
+        if (selectedButton != "") {
+            setUnselectImg(button: buttonDict[selectedButton]!)
+            if(selectedButton == buttonName) { //clicked the selected button
+                selectedButton = ""
+            } else { // selected another button
+                selectedButton = buttonName
+                setSelectedImg(button: sender)
+            }
+        } else { // selected a button
+            selectedButton = buttonName
+            setSelectedImg(button : sender)
+        }
+        print("selected button is \(selectedButton)")
+        nextButton.isEnabled = (selectedButton != "")
     }
     
-    @IBAction func clickPlumButton(_ sender: UIButton) {
-        setButton(clickedbutton : sender, buttonName: "plum")
+    @IBAction func clickNextButton(_ sender: UIButton) {
+        //set players name
     }
     
-    @IBAction func clickGreenButton(_ sender: UIButton) {
-        setButton(clickedbutton : sender, buttonName: "green")
-    }
-    
-    @IBAction func clickPeacockButton(_ sender: UIButton) {
-        setButton(clickedbutton : sender, buttonName: "peacock")
-    }
-    
-    @IBAction func clickScarletButton(_ sender: UIButton) {
-        setButton(clickedbutton : sender, buttonName: "scarlet")
-    }
-    
-    @IBAction func clickWhiteButton(_ sender: UIButton) {
-        setButton(clickedbutton : sender, buttonName: "white")
-    }
     
     /*
     // MARK: - Navigation
@@ -85,35 +94,15 @@ class playersViewController: UIViewController {
     */
     
     // MARK: private functions
-    func setSelectedImg (button : UIButton, name : String) {
-        let imgName = "\(name)-selected.png"
+    func setSelectedImg (button : UIButton) {
+        let imgName = "\(nameDict[button]!)-selected.png"
         button.setImage(UIImage(named: imgName), for: UIControlState.normal)
     }
     
-    func setUnselectImg (button : UIButton, name : String) {
-        let imgName = "\(name).png"
+    func setUnselectImg (button : UIButton) {
+        let imgName = "\(nameDict[button]!).png"
         button.setImage(UIImage(named: imgName), for: UIControlState.normal)
     }
-    
-    func getButtonByName (name : String) -> UIButton {
-        return buttonDict[name]!
-    }
-    
-    func setButton(clickedbutton : UIButton, buttonName : String) {
-        if (selectedButton != "") {
-            setUnselectImg(button: getButtonByName(name : selectedButton), name : selectedButton)
-            if(selectedButton == buttonName) { //clicked the selected button
-                selectedButton = ""
-            } else { // selected another button
-                selectedButton = buttonName
-                setSelectedImg(button: clickedbutton, name: buttonName)
-            }
-        } else { // selected a button
-            selectedButton = buttonName
-            setSelectedImg(button : clickedbutton, name: buttonName)
-        }
-        
-        //TO-DO: next button disable/enable
-    }
+
 
 }
