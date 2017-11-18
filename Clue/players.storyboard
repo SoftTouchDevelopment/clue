@@ -4,23 +4,30 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Players View Controller-->
         <scene sceneID="09z-x5-dke">
             <objects>
-                <viewController id="gq0-n7-Bzz" sceneMemberID="viewController">
+                <viewController id="gq0-n7-Bzz" customClass="playersViewController" customModule="Clue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="players" id="CmB-Tr-8V2">
                         <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select-player-banner" translatesAutoresizingMaskIntoConstraints="NO" id="rpI-e4-2X6">
+                                <rect key="frame" x="267" y="0.0" width="170" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLW-s1-TqH" userLabel="backButton">
                                 <rect key="frame" x="0.0" y="138" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="back-button"/>
+                                <connections>
+                                    <segue destination="Lhk-6r-VlT" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="pE2-fB-ctt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yE4-TB-9hi" userLabel="nextButton">
                                 <rect key="frame" x="627" y="137" width="100" height="100"/>
@@ -34,7 +41,17 @@
                                     <color key="titleColor" red="1" green="0.92350562660000002" blue="0.21401675580000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="1" green="0.90094984353606089" blue="0.3651470094469127" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="clickMustardButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="VyO-NW-QQw"/>
+                                </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Col. Mustard" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Smm-b0-DFH" userLabel="mustardTextField">
+                                <rect key="frame" x="125" y="186" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aC-pi-ZTQ" userLabel="plumBtn">
                                 <rect key="frame" x="285" y="31" width="152" height="152"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -42,6 +59,9 @@
                                     <color key="titleColor" red="0.86397655269999996" green="0.56653388169999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.86397655272528395" green="0.56653388167284047" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="clickPlumButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="pjW-NE-s9A"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Prof. Plum" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WYJ-96-I4y" userLabel="plumTextField">
                                 <rect key="frame" x="313" y="186" width="97" height="30"/>
@@ -57,6 +77,9 @@
                                     <color key="titleColor" red="0.43424260849929452" green="1" blue="0.48887103152672673" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.43424260850000002" green="1" blue="0.4888710315" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="clickGreenButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="aZ9-co-pp1"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mr Green" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vDV-1c-f5n" userLabel="greenTextField">
                                 <rect key="frame" x="518" y="186" width="97" height="30"/>
@@ -72,6 +95,9 @@
                                     <color key="titleColor" red="0.20195028565203876" green="0.30590004931839909" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.20195028570000001" green="0.30590004929999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="clickPeacockButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="RaT-5F-Wgj"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mrs Peacock" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c82-Ik-NsP" userLabel="peacockTextField">
                                 <rect key="frame" x="126" y="364" width="97" height="30"/>
@@ -80,6 +106,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lx6-cm-iOO" userLabel="scarletBtn">
+                                <rect key="frame" x="285" y="213" width="152" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="scarlet">
+                                    <color key="titleColor" red="1" green="0.081514688733753116" blue="0.11525017674556759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.081514688730000007" blue="0.1152501767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickScarletButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="Vrb-Vc-pMs"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Miss Scarlet" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KeR-X6-sUr" userLabel="scarletTextField">
                                 <rect key="frame" x="318" y="364" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -94,26 +131,10 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="clickWhiteButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="WYj-Ux-VfB"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Col. Mustard" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Smm-b0-DFH" userLabel="mustardTextField">
-                                <rect key="frame" x="125" y="186" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lx6-cm-iOO" userLabel="scarletBtn">
-                                <rect key="frame" x="285" y="213" width="152" height="152"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="scarlet">
-                                    <color key="titleColor" red="1" green="0.081514688733753116" blue="0.11525017674556759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="1" green="0.081514688730000007" blue="0.1152501767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="select-player-banner" translatesAutoresizingMaskIntoConstraints="NO" id="rpI-e4-2X6">
-                                <rect key="frame" x="267" y="0.0" width="170" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mrs White" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hib-9k-m1F" userLabel="whiteTextField">
                                 <rect key="frame" x="511" y="364" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -125,10 +146,32 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="b15-KR-OPD"/>
                     </view>
+                    <connections>
+                        <outlet property="greenButton" destination="a7k-Yx-sea" id="v2E-Hb-ndV"/>
+                        <outlet property="greenTextfield" destination="vDV-1c-f5n" id="wrn-T7-Fq8"/>
+                        <outlet property="mustardButton" destination="9Sc-vo-3ua" id="R04-X6-JGc"/>
+                        <outlet property="mustardTextfield" destination="Smm-b0-DFH" id="jIF-gf-lz5"/>
+                        <outlet property="nextButton" destination="yE4-TB-9hi" id="A1F-Mm-Fk9"/>
+                        <outlet property="peacockButton" destination="eZt-HQ-7Vp" id="BbV-Qi-w53"/>
+                        <outlet property="peacockTextfield" destination="c82-Ik-NsP" id="54O-rA-F41"/>
+                        <outlet property="plumButton" destination="4aC-pi-ZTQ" id="X67-JI-4IY"/>
+                        <outlet property="plumTextfield" destination="WYJ-96-I4y" id="4CP-AG-mc6"/>
+                        <outlet property="scarletButton" destination="lx6-cm-iOO" id="ETd-iW-qXN"/>
+                        <outlet property="scarletTextfield" destination="KeR-X6-sUr" id="6XP-NX-Uxc"/>
+                        <outlet property="whiteButton" destination="Z0G-Xq-ADX" id="nFx-pP-9y4"/>
+                        <outlet property="whiteTextfield" destination="hib-9k-m1F" id="1Zc-L8-lFP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVF-x7-VZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="112.89355322338831" y="0.80000000000000004"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="Twk-vJ-VUh">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Main" storyboardName="Main" id="Lhk-6r-VlT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyr-Sy-UfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
