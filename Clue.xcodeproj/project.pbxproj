@@ -17,6 +17,7 @@
 		DF4AA1A61FBF364300B8E402 /* playersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4AA1A51FBF364300B8E402 /* playersViewController.swift */; };
 		DF4AA1B91FBFE5E300B8E402 /* game.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4AA1B81FBFE5E300B8E402 /* game.swift */; };
 		DF68FFE81FC0A0180091BB8B /* selectCards.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF68FFE71FC0A0180091BB8B /* selectCards.storyboard */; };
+		DF68FFEA1FC115BF0091BB8B /* selectCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68FFE91FC115BF0091BB8B /* selectCardsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		DF4AA1A51FBF364300B8E402 /* playersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playersViewController.swift; sourceTree = "<group>"; };
 		DF4AA1B81FBFE5E300B8E402 /* game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = game.swift; sourceTree = "<group>"; };
 		DF68FFE71FC0A0180091BB8B /* selectCards.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = selectCards.storyboard; sourceTree = "<group>"; };
+		DF68FFE91FC115BF0091BB8B /* selectCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectCardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				DF4AA1A51FBF364300B8E402 /* playersViewController.swift */,
+				DF68FFE91FC115BF0091BB8B /* selectCardsViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			files = (
 				B19F57001FB6A557006C0AE9 /* ViewController.swift in Sources */,
 				DF4AA1A61FBF364300B8E402 /* playersViewController.swift in Sources */,
+				DF68FFEA1FC115BF0091BB8B /* selectCardsViewController.swift in Sources */,
 				DF4AA1B91FBFE5E300B8E402 /* game.swift in Sources */,
 				DF4AA1821FBBD16900B8E402 /* suspects.swift in Sources */,
 				B19F56FE1FB6A557006C0AE9 /* AppDelegate.swift in Sources */,
