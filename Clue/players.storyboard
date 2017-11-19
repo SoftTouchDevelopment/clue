@@ -35,6 +35,7 @@
                                 <state key="normal" image="forward-button"/>
                                 <connections>
                                     <action selector="clickNextButton:" destination="gq0-n7-Bzz" eventType="touchUpInside" id="Gwc-tz-ATX"/>
+                                    <segue destination="CxE-IT-yMS" kind="show" id="Rnb-uC-u7k"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sc-vo-3ua" userLabel="mustardBtn">
@@ -149,6 +150,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="b15-KR-OPD"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="greenButton" destination="a7k-Yx-sea" id="v2E-Hb-ndV"/>
                         <outlet property="greenTextfield" destination="vDV-1c-f5n" id="wrn-T7-Fq8"/>
@@ -175,7 +177,15 @@
                 <viewControllerPlaceholder storyboardIdentifier="Main" storyboardName="Main" id="Lhk-6r-VlT" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyr-Sy-UfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="113" y="719"/>
+            <point key="canvasLocation" x="113" y="593"/>
+        </scene>
+        <!--selectCards-->
+        <scene sceneID="dnY-Y0-YsQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="selectCards" id="CxE-IT-yMS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8af-lf-Ysk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="566" y="0.0"/>
         </scene>
     </scenes>
     <resources>

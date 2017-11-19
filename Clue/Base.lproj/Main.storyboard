@@ -57,6 +57,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="copyrightLabel" destination="OhK-Ki-BJz" id="eOg-4N-uuG"/>
                         <outlet property="versionLabel" destination="riy-14-rrf" id="87N-ma-V7m"/>
