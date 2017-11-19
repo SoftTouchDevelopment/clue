@@ -151,6 +151,8 @@
                         <viewLayoutGuide key="safeArea" id="b15-KR-OPD"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="greenButton" destination="a7k-Yx-sea" id="v2E-Hb-ndV"/>
                         <outlet property="greenTextfield" destination="vDV-1c-f5n" id="wrn-T7-Fq8"/>
@@ -174,7 +176,7 @@
         <!--Main-->
         <scene sceneID="Twk-vJ-VUh">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Main" storyboardName="Main" id="Lhk-6r-VlT" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Main" id="Lhk-6r-VlT" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hyr-Sy-UfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="113" y="593"/>
