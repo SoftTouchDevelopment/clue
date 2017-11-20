@@ -11,9 +11,9 @@ import UIKit
 class selectCardsViewController: UIViewController {
     // MARK: properties
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var suspectsView: UIView!
     @IBOutlet weak var weaponsView: UIView!
     @IBOutlet weak var roomsView: UIView!
+    @IBOutlet weak var suspectsView: suspectsUIView!
     
     
     override func viewDidLoad() {
