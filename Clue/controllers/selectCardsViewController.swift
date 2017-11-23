@@ -11,16 +11,22 @@ import UIKit
 class selectCardsViewController: UIViewController {
     // MARK: properties
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var suspectsView: UIView!
     @IBOutlet weak var weaponsView: UIView!
     @IBOutlet weak var roomsView: UIView!
+    @IBOutlet weak var suspectsView: suspectsUIView!
+    
+    var clue = game()
+    var suspects : Set<String> = []
+    var rooms : Set<String> = []
+    var weapons : Set<String> = []
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         weaponsView.isHidden = true
         roomsView.isHidden = true
-        // Do any additional setup after loading the view.
+        clue.printInfo()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,7 +35,6 @@ class selectCardsViewController: UIViewController {
     }
     
     // MARK: actions
-    
     @IBAction func changeViews(_ sender: UISwipeGestureRecognizer) {
         let currentPage = pageControl.currentPage
         if (sender.direction == UISwipeGestureRecognizerDirection.left) {
@@ -42,6 +47,9 @@ class selectCardsViewController: UIViewController {
         updateCurrentPage(index: pageControl.currentPage )
     }
     
+    @IBAction func clickNextButton(_ sender: UIButton) {
+        clue.setHandCards(suspects: suspects, weapons: weapons, rooms: rooms)
+    }
     
     @IBAction func switchViews(_ sender: UIPageControl) {
         updateCurrentPage(index: sender.currentPage)

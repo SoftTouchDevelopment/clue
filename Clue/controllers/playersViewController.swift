@@ -29,7 +29,7 @@ class playersViewController: UIViewController {
     var selectedButton : String = ""
     var buttonDict: [ String : UIButton ] = [:]
     var nameDict: [ UIButton : String ] = [:]
-    //var clue : game
+    var clue = game()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,13 +50,15 @@ class playersViewController: UIViewController {
             scarletButton : "scarlet",
             whiteButton : "white"
         ]
-        //clue = game()
+
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     // MARK: actions
     @IBAction func clickPlayerButton(_ sender: UIButton) {
@@ -79,19 +81,29 @@ class playersViewController: UIViewController {
     }
     
     @IBAction func clickNextButton(_ sender: UIButton) {
-        //set players name
+        clue.setPlayersName(type: suspect_type.col_mustard, name: mustardTextfield.text!)
+        clue.setPlayersName(type: suspect_type.prof_plum, name: plumTextfield.text!)
+        clue.setPlayersName(type: suspect_type.mr_green, name: greenTextfield.text!)
+        clue.setPlayersName(type: suspect_type.mrs_white, name: whiteTextfield.text!)
+        clue.setPlayersName(type: suspect_type.mrs_peacock, name: peacockTextfield.text!)
+        clue.setPlayersName(type: suspect_type.miss_scarlet, name: scarletTextfield.text!)
+        clue.setUser(selectedButton);
     }
     
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.destination is selectCardsViewController {
+            let vc = segue.destination as? selectCardsViewController
+            vc?.clue = clue
+        }
     }
-    */
+    
     
     // MARK: private functions
     func setSelectedImg (button : UIButton) {

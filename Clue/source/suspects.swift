@@ -26,10 +26,20 @@ let suspectDict: [suspect_type: String]  = [
     suspect_type.mrs_white: "Mrs White",
 ]
 
+let colorDict: [String: suspect_type]  = [
+    "mustard" : suspect_type.col_mustard,
+    "plum" : suspect_type.prof_plum,
+    "green" : suspect_type.mr_green,
+    "peacock" : suspect_type.mrs_peacock,
+    "scarlet" : suspect_type.miss_scarlet,
+    "white" : suspect_type.mrs_white
+]
+
 class suspect {
     var type : suspect_type;
     var name : String = ""
     var player : String = ""
+    var isUser : Bool = false
     
     init(type: suspect_type, player: String) {
         self.type = type
@@ -54,6 +64,10 @@ class suspect {
     
     func setPlayer(player:String) {
         self.player = player;
+    }
+    
+    func printInfo () {
+        print("type: \(name) playerName: \(player)")
     }
 }
 
