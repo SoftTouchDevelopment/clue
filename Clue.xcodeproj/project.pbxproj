@@ -20,7 +20,18 @@
 		DF68FFEA1FC115BF0091BB8B /* selectCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68FFE91FC115BF0091BB8B /* selectCardsViewController.swift */; };
 		DF68FFEE1FC256940091BB8B /* suspectsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68FFED1FC256940091BB8B /* suspectsUIView.swift */; };
 		DF68FFF01FC26D040091BB8B /* randomDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68FFEF1FC26D040091BB8B /* randomDictionary.swift */; };
+		DFE90AD11FC613D90004F04A /* ClueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE90AD01FC613D90004F04A /* ClueTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFE90AD31FC613D90004F04A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B19F56F21FB6A557006C0AE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B19F56F91FB6A557006C0AE9;
+			remoteInfo = Clue;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B19F56FA1FB6A557006C0AE9 /* Clue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clue.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,10 +49,20 @@
 		DF68FFE91FC115BF0091BB8B /* selectCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectCardsViewController.swift; sourceTree = "<group>"; };
 		DF68FFED1FC256940091BB8B /* suspectsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = suspectsUIView.swift; sourceTree = "<group>"; };
 		DF68FFEF1FC26D040091BB8B /* randomDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomDictionary.swift; sourceTree = "<group>"; };
+		DFE90ACE1FC613D90004F04A /* ClueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFE90AD01FC613D90004F04A /* ClueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClueTests.swift; sourceTree = "<group>"; };
+		DFE90AD21FC613D90004F04A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B19F56F71FB6A557006C0AE9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE90ACB1FC613D90004F04A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				B19F56FC1FB6A557006C0AE9 /* Clue */,
+				DFE90ACF1FC613D90004F04A /* ClueTests */,
 				B19F56FB1FB6A557006C0AE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				B19F56FA1FB6A557006C0AE9 /* Clue.app */,
+				DFE90ACE1FC613D90004F04A /* ClueTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +135,15 @@
 			path = controllers;
 			sourceTree = "<group>";
 		};
+		DFE90ACF1FC613D90004F04A /* ClueTests */ = {
+			isa = PBXGroup;
+			children = (
+				DFE90AD01FC613D90004F04A /* ClueTests.swift */,
+				DFE90AD21FC613D90004F04A /* Info.plist */,
+			);
+			path = ClueTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,19 +164,42 @@
 			productReference = B19F56FA1FB6A557006C0AE9 /* Clue.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DFE90ACD1FC613D90004F04A /* ClueTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFE90AD51FC613D90004F04A /* Build configuration list for PBXNativeTarget "ClueTests" */;
+			buildPhases = (
+				DFE90ACA1FC613D90004F04A /* Sources */,
+				DFE90ACB1FC613D90004F04A /* Frameworks */,
+				DFE90ACC1FC613D90004F04A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFE90AD41FC613D90004F04A /* PBXTargetDependency */,
+			);
+			name = ClueTests;
+			productName = ClueTests;
+			productReference = DFE90ACE1FC613D90004F04A /* ClueTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B19F56F21FB6A557006C0AE9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Micheal Montpetit";
 				TargetAttributes = {
 					B19F56F91FB6A557006C0AE9 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+					};
+					DFE90ACD1FC613D90004F04A = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B19F56F91FB6A557006C0AE9;
 					};
 				};
 			};
@@ -162,6 +217,7 @@
 			projectRoot = "";
 			targets = (
 				B19F56F91FB6A557006C0AE9 /* Clue */,
+				DFE90ACD1FC613D90004F04A /* ClueTests */,
 			);
 		};
 /* End PBXProject section */
@@ -176,6 +232,13 @@
 				B19F57051FB6A557006C0AE9 /* Assets.xcassets in Resources */,
 				B19F57031FB6A557006C0AE9 /* Main.storyboard in Resources */,
 				DF68FFE81FC0A0180091BB8B /* selectCards.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFE90ACC1FC613D90004F04A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +260,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DFE90ACA1FC613D90004F04A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE90AD11FC613D90004F04A /* ClueTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFE90AD41FC613D90004F04A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B19F56F91FB6A557006C0AE9 /* Clue */;
+			targetProxy = DFE90AD31FC613D90004F04A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B19F57011FB6A557006C0AE9 /* Main.storyboard */ = {
@@ -360,6 +439,40 @@
 			};
 			name = Release;
 		};
+		DFE90AD61FC613D90004F04A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6MV48GC58A;
+				INFOPLIST_FILE = ClueTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yg.ClueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clue.app/Clue";
+			};
+			name = Debug;
+		};
+		DFE90AD71FC613D90004F04A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6MV48GC58A;
+				INFOPLIST_FILE = ClueTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = yg.ClueTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Clue.app/Clue";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -377,6 +490,15 @@
 			buildConfigurations = (
 				B19F570D1FB6A557006C0AE9 /* Debug */,
 				B19F570E1FB6A557006C0AE9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFE90AD51FC613D90004F04A /* Build configuration list for PBXNativeTarget "ClueTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFE90AD61FC613D90004F04A /* Debug */,
+				DFE90AD71FC613D90004F04A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
