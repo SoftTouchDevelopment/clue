@@ -12,7 +12,7 @@ class selectCardsViewController: UIViewController {
     // MARK: properties
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var weaponsView: UIView!
-    @IBOutlet weak var roomsView: UIView!
+    @IBOutlet weak var roomsView: roomsView!
     @IBOutlet weak var suspectsView: suspectsUIView!
     
     var clue = game()

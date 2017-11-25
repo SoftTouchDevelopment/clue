@@ -18,21 +18,21 @@ enum suspect_type {
 }
 
 let suspectDict: [suspect_type: String]  = [
-    suspect_type.col_mustard: "Col. Mustard",
-    suspect_type.prof_plum: "Prof. Plum",
-    suspect_type.mr_green: "Mr Green",
-    suspect_type.mrs_peacock: "Mrs Peacock",
-    suspect_type.miss_scarlet: "Miss Scarlet",
-    suspect_type.mrs_white: "Mrs White",
+    suspect_type.col_mustard: SUSPECT.COL_MUSTARD,
+    suspect_type.prof_plum: SUSPECT.PROF_PLUM,
+    suspect_type.mr_green: SUSPECT.MR_GREEN,
+    suspect_type.mrs_peacock: SUSPECT.MRS_PEACOCK,
+    suspect_type.miss_scarlet: SUSPECT.MISS_SCARLET,
+    suspect_type.mrs_white: SUSPECT.MRS_WHITE,
 ]
 
 let colorDict: [String: suspect_type]  = [
-    "mustard" : suspect_type.col_mustard,
-    "plum" : suspect_type.prof_plum,
-    "green" : suspect_type.mr_green,
-    "peacock" : suspect_type.mrs_peacock,
-    "scarlet" : suspect_type.miss_scarlet,
-    "white" : suspect_type.mrs_white
+    COLOR.MUSTARD : suspect_type.col_mustard,
+    COLOR.PLUM : suspect_type.prof_plum,
+    COLOR.GREEN : suspect_type.mr_green,
+    COLOR.PEACOCK : suspect_type.mrs_peacock,
+    COLOR.SCARLET : suspect_type.miss_scarlet,
+    COLOR.WHITE : suspect_type.mrs_white
 ]
 
 class suspect {

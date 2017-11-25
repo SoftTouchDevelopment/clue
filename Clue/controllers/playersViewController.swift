@@ -35,20 +35,20 @@ class playersViewController: UIViewController {
         super.viewDidLoad()
         nextButton.isEnabled = false
         buttonDict = [
-            "mustard" : mustardButton,
-            "plum" : plumButton,
-            "green" : greenButton,
-            "peacock" : peacockButton,
-            "scarlet" : scarletButton,
-            "white" : whiteButton
+            COLOR.MUSTARD : mustardButton,
+            COLOR.PLUM : plumButton,
+            COLOR.GREEN : greenButton,
+            COLOR.PEACOCK : peacockButton,
+            COLOR.SCARLET : scarletButton,
+            COLOR.WHITE : whiteButton
         ]
         nameDict = [
-            mustardButton: "mustard",
-            plumButton: "plum",
-            greenButton : "green",
-            peacockButton : "peacock",
-            scarletButton : "scarlet",
-            whiteButton : "white"
+            mustardButton: COLOR.MUSTARD,
+            plumButton: COLOR.PLUM,
+            greenButton : COLOR.GREEN,
+            peacockButton : COLOR.PEACOCK,
+            scarletButton : COLOR.SCARLET,
+            whiteButton : COLOR.WHITE
         ]
 
 

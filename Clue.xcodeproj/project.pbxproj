@@ -12,6 +12,9 @@
 		B19F57031FB6A557006C0AE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19F57011FB6A557006C0AE9 /* Main.storyboard */; };
 		B19F57051FB6A557006C0AE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B19F57041FB6A557006C0AE9 /* Assets.xcassets */; };
 		B19F57081FB6A557006C0AE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B19F57061FB6A557006C0AE9 /* LaunchScreen.storyboard */; };
+		DF0731AA1FC8BF4600782979 /* cardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0731A91FC8BF4600782979 /* cardButton.swift */; };
+		DF0731AC1FC8C7EF00782979 /* roomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0731AB1FC8C7EF00782979 /* roomsView.swift */; };
+		DF0731AE1FC8CA4C00782979 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0731AD1FC8CA4C00782979 /* constants.swift */; };
 		DF4AA17C1FBA268300B8E402 /* players.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF4AA17B1FBA268300B8E402 /* players.storyboard */; };
 		DF4AA1821FBBD16900B8E402 /* suspects.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4AA1811FBBD16900B8E402 /* suspects.swift */; };
 		DF4AA1A61FBF364300B8E402 /* playersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF4AA1A51FBF364300B8E402 /* playersViewController.swift */; };
@@ -41,6 +44,9 @@
 		B19F57041FB6A557006C0AE9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B19F57071FB6A557006C0AE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B19F57091FB6A557006C0AE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF0731A91FC8BF4600782979 /* cardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardButton.swift; sourceTree = "<group>"; };
+		DF0731AB1FC8C7EF00782979 /* roomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = roomsView.swift; sourceTree = "<group>"; };
+		DF0731AD1FC8CA4C00782979 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		DF4AA17B1FBA268300B8E402 /* players.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = players.storyboard; sourceTree = "<group>"; };
 		DF4AA1811FBBD16900B8E402 /* suspects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = suspects.swift; sourceTree = "<group>"; };
 		DF4AA1A51FBF364300B8E402 /* playersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playersViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +119,7 @@
 				DF4AA1811FBBD16900B8E402 /* suspects.swift */,
 				DF4AA1B81FBFE5E300B8E402 /* game.swift */,
 				DF68FFEF1FC26D040091BB8B /* randomDictionary.swift */,
+				DF0731AD1FC8CA4C00782979 /* constants.swift */,
 			);
 			path = source;
 			sourceTree = "<group>";
@@ -131,6 +138,8 @@
 				DF4AA1A51FBF364300B8E402 /* playersViewController.swift */,
 				DF68FFE91FC115BF0091BB8B /* selectCardsViewController.swift */,
 				DF68FFED1FC256940091BB8B /* suspectsUIView.swift */,
+				DF0731A91FC8BF4600782979 /* cardButton.swift */,
+				DF0731AB1FC8C7EF00782979 /* roomsView.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -253,8 +262,11 @@
 				B19F57001FB6A557006C0AE9 /* ViewController.swift in Sources */,
 				DF4AA1A61FBF364300B8E402 /* playersViewController.swift in Sources */,
 				DF68FFEA1FC115BF0091BB8B /* selectCardsViewController.swift in Sources */,
+				DF0731AE1FC8CA4C00782979 /* constants.swift in Sources */,
 				DF4AA1B91FBFE5E300B8E402 /* game.swift in Sources */,
+				DF0731AA1FC8BF4600782979 /* cardButton.swift in Sources */,
 				DF68FFEE1FC256940091BB8B /* suspectsUIView.swift in Sources */,
+				DF0731AC1FC8C7EF00782979 /* roomsView.swift in Sources */,
 				DF4AA1821FBBD16900B8E402 /* suspects.swift in Sources */,
 				B19F56FE1FB6A557006C0AE9 /* AppDelegate.swift in Sources */,
 			);

@@ -32,30 +32,30 @@ class game {
     
     func generateCards () {
         suspectsCards = [
-            "mustard" : "",
-            "plum" : "",
-            "green" : "",
-            "peacock" : "",
-            "scarlet" : "",
-            "white" : ""
+            COLOR.MUSTARD : "",
+            COLOR.PLUM: "",
+            COLOR.GREEN : "",
+            COLOR.PEACOCK : "",
+            COLOR.SCARLET : "",
+            COLOR.WHITE : ""
         ]
         roomCards = [
-            "hall" : "",
-            "lounge" : "",
-            "dinning room" : "",
-            "ballroom" : "",
-            "conservatory" : "",
-            "billiard room" : "",
-            "library" : "",
-            "study" : ""
+            ROOM.HALL : "",
+            ROOM.LOUNGE : "",
+            ROOM.DINNING_ROOM : "",
+            ROOM.BALLROOM : "",
+            ROOM.CONSERVATORY : "",
+            ROOM.BILLIARD_ROOM : "",
+            ROOM.LIBRARY : "",
+            ROOM.STUDY : ""
         ]
         weaponCards = [
-            "knife" : "",
-            "candlestick" : "",
-            "revolver" : "",
-            "rope" : "",
-            "lead pipe" : "",
-            "wrench" : ""
+            WEAPON.KNIFE : "",
+            WEAPON.CANDLE_STICK : "",
+            WEAPON.REVOLVER : "",
+            WEAPON.ROPE : "",
+            WEAPON.LEAD_PIPE : "",
+            WEAPON.WRENCH : ""
         ]
     }
     
